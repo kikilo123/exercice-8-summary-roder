@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+:root{
+--Pal-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+
+--font:"Red Hat Display", sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--Pal-blue);
+     background-size:contain; 
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.content{
+    width: auto;
+    height: auto;
+    background-color: var(--Very-pale-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.img img{
+    border-radius: 10px 10px 0 0;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title h1{
+    color: var(--Dark-blue);
+    font-family: var(--font);
+    margin: 20px 0 15px;
+    text-align: center;
+    font-weight: 900;
+    font-size:28px;
+}
+.title p{
+    color: var(--Desaturated-blue);
+    width: 300px;
+    text-align: center;
+    line-height: 22px;
+    font-family: var(--font);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.pleayer{
+    background-color: hsla(225, 100%, 94%, 0.515);
+    display: flex;
+    align-items: center;
+    /* padding: 5px; */
+    margin-top: 20px;
+}
+
+.img1 img{
+    margin:15px 15px 15px 15px ;
+}
+.pri-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.anull{
+    color: var(--Dark-blue);
+    font-family: var(--font);
+    font-weight: 900;
+    font-size: 15px;
+}
+.pri{
+    color: var(--Desaturated-blue);
+    font-family: var(--font);
+    font-size: 13px;
+}
+.link{
+    margin-left: 50px;
+}
+.link a{
+    margin-left: 60px;
+    margin-right: 10px;
+    font-family: var(--font);
+    font-weight: 900;
+    font-size: 13px;
+}
+.button button{
+    background-color: var(--Bright-blue);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-family: var(--font);
+    margin: 20px;
+    border-radius: 10px;
+    width: 330px;
+    font-weight: 900;
+    -webkit-box-shadow: 5px 6px 34px -3px rgba(0,0,0,0.34);
+    -moz-box-shadow: 5px 6px 34px -3px rgba(0,0,0,0.34);
+    box-shadow: 5px 6px 34px -3px rgba(0,0,0,0.34);
+    transition: all 0.5s ease-in-out;
+}
+
+.cancel a {
+    font-family: var(--font);
+    color: var(--Desaturated-blue);
+    margin: 20px ;
+    text-decoration: none;
+    font-weight: 900;
+
+    position: relative;
+}
+.cancel {
+    margin-bottom: 20px;
+}
+.button button:hover{
+    background-color: green;
+}
+.cancel a::before{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 4px;
+    background-color: blue;
+    width: 0%;
+    transition: 0.3s ease;
+}
+.cancel a:hover::before{
+    width: 100%;
+}
+
